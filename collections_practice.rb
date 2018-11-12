@@ -21,7 +21,7 @@ def count_elements(array)
   counts = Hash.new(0)
   array.each { |element| counts[element] += 1 }
   return_array = []
-  counts.each do |element,num| 
+  counts.each do |element,num|
     element.each { |key, val| return_array << {key => val, :count => num} }
   end
   return_array
