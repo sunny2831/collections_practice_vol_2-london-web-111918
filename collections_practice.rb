@@ -46,4 +46,3 @@ def merge_data(keys,data)
   end
   cool_hashes
 end
- 
