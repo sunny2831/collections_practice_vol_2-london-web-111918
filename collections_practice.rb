@@ -10,5 +10,5 @@ def contain_a(array)
 end
 
 def first_wa(array)
-  array.find{ |element| element.start_with?('wa') }
+  array.find{ |element| element.include?('wa') }
 end
