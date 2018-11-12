@@ -38,3 +38,16 @@ def merge_data(keys,data)
   end
   merged_hashes
  end
+
+ def find_cool(array)
+  cool_hashes = []
+  array.each do |hash|
+    hash.each { |k,v| cool_hashes << hash if k == :temperature && v == "cool"}
+  end
+  cool_hashes
+end
+ def organize_schools(hash)
+  locations = {}
+  hash.values.each { |location| locations[location.values[0]] = [] }
+  hash.each { |school, location| locations[location.values[0]] << school }
+  locations
